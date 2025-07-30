@@ -1,6 +1,9 @@
 spring:
   application:
-    name: notification
-
-server:
-  port: 8086
+    name: ead-payment-service
+  config:
+    import: 'configserver:'
+  cloud:
+    config:
+      discovery:
+        serviceId: 'ead-config-server'
